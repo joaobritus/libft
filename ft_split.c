@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jaragao- <jaragao-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 14:03:18 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/11/08 16:08:02 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/11/15 18:47:30 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,25 @@ char	**wordnumber(char const *s, char c)
 	if (!str)
 		return (NULL);
 	return (str);
+}
+
+void	short(char **str, char *s, char c)
+{
+	int	i;
+	int	counter;
+
+	i = 0;
+	counter = 0;
+	if (s[i] != c)
+	{
+		counter++;
+		if (s[i + 1] == c || s[i + 1] == '\0')
+		{
+			str[y] = (char *)malloc((counter + 1) * sizeof(char));
+			if (!str)
+				return (NULL);
+		}
+	}
 }
 
 char	**ft_split(char const *s, char c)
@@ -59,13 +78,8 @@ char	**ft_split(char const *s, char c)
 				i -= (counter - 1);
 				counter += i;
 				while (i < counter)
-				{
-					str[y][z] = s[i];
-					z++;
-					i++;
-				}
-				str[y][z] = '\0';
-				y++;
+					str[y][z++] = s[i++];
+				str[y++][z] = '\0';
 				z = 0;
 				counter = 0;
 				i--;
