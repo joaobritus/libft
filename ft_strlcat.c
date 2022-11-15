@@ -17,6 +17,7 @@ size_t	ft_strlcat(char *dest, char *src, size_t size)
 	size_t	i;
 	size_t	y;
 	size_t	destlength;
+
 	destlength = ft_strlen(dest);
 	y = destlength;
 	if (!size)

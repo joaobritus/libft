@@ -14,8 +14,9 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int	i;
-	char *zas;
+	int		i;
+	char	*zas;
+
 	i = 0;
 	while (s[i])
 		i++;

@@ -15,8 +15,8 @@
 
 char	**wordnumber(char const *s, char c)
 {
-	int	i;
-	int	y;
+	int		i;
+	int		y;
 	char	**str;
 
 	i = 0;
@@ -36,10 +36,10 @@ char	**wordnumber(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**str;
-	int	i;
-	int	y;
-	int	z;
-	int	counter;
+	int		i;
+	int		y;
+	int		z;
+	int		counter;
 
 	str = wordnumber(s, c);
 	i = 0;
@@ -53,7 +53,7 @@ char	**ft_split(char const *s, char c)
 			counter++;
 			if (s[i + 1] == c || s[i + 1] == '\0')
 			{
-				str[y] = (char *)malloc((counter + 1)*sizeof(char));
+				str[y] = (char *)malloc((counter + 1) * sizeof(char));
 				if (!str)
 					return (NULL);
 				i -= (counter - 1);

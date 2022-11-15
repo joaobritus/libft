@@ -32,7 +32,7 @@ int	length(int n)
 
 char	*ft_itoa(int n)
 {
-	int	i;
+	int		i;
 	char	*zas;
 
 	i = length(n);
