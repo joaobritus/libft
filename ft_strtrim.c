@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	find(char const *set, char a)
+static int	find(char const *set, char a)
 {
 	int	i;
 
@@ -29,11 +29,13 @@ int	find(char const *set, char a)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
-	int	i;
-	int	start;
-	int	end;
-	int	size;
+	int		i;
+	int		start;
+	int		end;
+	int		size;
 
+	if (!s1 || !set)
+		return (0);
 	size = 0;
 	start = 0;
 	end = 0;
@@ -42,8 +44,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 	start = i;
 	i = ft_strlen(s1) - 1;
-	while (i >= 0 && find(set, s1[i]))
-			i--;
+	while (i > 0 && find(set, s1[i]))
+		i--;
 	end = i;
 	size = end - start + 1;
 	str = malloc((size + 1) * sizeof(char));
@@ -58,4 +60,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	str[i] = '\0';
 	return (str);
-}		
+}
