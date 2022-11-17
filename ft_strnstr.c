@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jaragao- <jaragao-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 14:00:36 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/11/08 14:39:15 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/11/17 14:50:32 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 			else
 				break ;
 			if (needle[y] == '\0')
-			{
 				return (str + i);
-			}
 		}
 		i++;
 	}
