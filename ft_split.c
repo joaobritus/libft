@@ -6,7 +6,7 @@
 /*   By: jaragao- <jaragao-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 14:03:18 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/11/17 16:50:45 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/11/17 17:18:36 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,41 +58,3 @@ char	**ft_split(char const *s, char c)
 	str[y] = NULL;
 	return (str);
 }
-
-// char	**str;
-// 	int		i;
-// 	int		y;
-// 	int		z;
-// 	int		counter;
-
-// 	str = wordnumber(s, c);
-// 	i = -1;
-// 	y = 0;
-// 	z = 0;
-// 	counter = 0;
-// 	if (!s)
-// 		return (0);
-// 	while (s[++i])
-// 	{
-// 		if (s[i] != c)
-// 		{
-// 			counter++;
-// 			if (s[i + 1] == c || s[i + 1] == '\0')
-// 			{
-// 				str[y] = malloc(counter + 1);
-// 				if (!str)
-// 					return (0);
-// 				i -= (counter - 1);
-// 				counter += i;
-// 				while (i < counter)
-// 					str[y][z++] = s[i++];
-// 				str[y++][z] = '\0';
-// 				z = 0;
-// 				counter = 0;
-// 				i--;
-// 			}
-// 		}
-// 	}
-// 	str[y] = NULL;
-// 	return (str);
-// }
