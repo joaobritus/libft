@@ -6,7 +6,7 @@
 /*   By: jaragao- <jaragao-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 13:32:40 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/11/17 14:18:08 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/11/22 14:05:47 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,20 @@
 
 int	length(int n)
 {
-	int	len;
+	int		len;
+	long	n2;
 
+	n2 = n;
 	len = 0;
-	if (n <= 0)
+	if (n2 <= 0)
 	{
-		n = n * -1;
+		n2 = n2 * -1;
 		len++;
 	}
-	while (n > 0)
+	while (n2 > 0)
 	{
 		len++;
-		n = (n / 10);
+		n2 = (n2 / 10);
 	}
 	return (len);
 }
@@ -41,7 +43,7 @@ char	*ft_itoa(int n)
 		return (NULL);
 	zas[i--] = '\0';
 	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
+		return (ft_memcpy(zas, "-2147483648", 11));
 	if (n < 0)
 	{
 		zas[0] = '-';
@@ -53,8 +55,6 @@ char	*ft_itoa(int n)
 		n = (n / 10);
 	}
 	if (n >= 0 && n <= 9)
-	{
 		zas[i] = n + 48;
-	}
 	return (zas);
 }
