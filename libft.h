@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jaragao- <jaragao-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 17:51:32 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/11/08 14:47:43 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/11/23 15:36:10 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,8 +74,6 @@ void				ft_putchar(char c);
 void				ft_putchar_fd(char c, int fd);
 
 void				ft_putendl_fd(char const *s, int fd);
-
-void				ft_putnbr(int n);
 
 void				ft_putnbr_fd(int n, int fd);
 
