@@ -6,7 +6,7 @@
 /*   By: jaragao- <jaragao-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 17:51:32 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/11/23 15:36:10 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/11/23 15:38:48 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,8 +68,6 @@ void				*ft_memcpy(void *dest, const void *src, size_t n);
 void				*ft_memset(void *s, int c, size_t n);
 
 void				*ft_memmove(void *dest, const void *src, size_t n);
-
-void				ft_putchar(char c);
 
 void				ft_putchar_fd(char c, int fd);
 
